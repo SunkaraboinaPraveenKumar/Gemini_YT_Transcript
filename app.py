@@ -17,7 +17,7 @@ prompt = ("You are Youtube video summarizer. You will be taking the transcript t
 # getting summary from google gemini api
 
 def generate_gemini_content(transcript_text, prompt):
-    model = genai.GenerativeModel("gemini-pro")
+    model = genai.GenerativeModel("gemini-1.5-pro")
     response = model.generate_content(prompt + transcript_text)
     return response.text
 
